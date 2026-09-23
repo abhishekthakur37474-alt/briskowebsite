@@ -9,6 +9,7 @@ if ($uri !== '/' && is_file($path)) {
 $map = [
     '/' => '/index.php',
     '/index' => '/index.php',
+    '/order' => '/order.php',
     '/franchise' => '/franchise.php',
     '/enquiry' => '/enquiry.php',
     '/contact' => '/contact.php',

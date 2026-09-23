@@ -48,14 +48,46 @@
   function initAos() {
     if (reduceMotion || typeof AOS === "undefined") return;
     AOS.init({
-      duration: 780,
+      duration: 900,
       easing: "ease-out-cubic",
       once: true,
-      offset: 80,
-      disable: function () {
-        return window.innerWidth < 768;
-      }
+      offset: 60,
+      delay: 0,
+      mirror: false
     });
+  }
+
+  function initParallax() {
+    if (reduceMotion) return;
+    var layers = document.querySelectorAll(".hero-bg, .final-cta-bg, .page-hero-bg");
+    var frames = document.querySelectorAll(".media-frame img");
+    if (!layers.length && !frames.length) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      layers.forEach(function (el) {
+        var parent = el.parentElement;
+        if (!parent) return;
+        var rect = parent.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        var shift = Math.round(rect.top * -0.22);
+        el.style.transform = "translate3d(0," + shift + "px,0) scale(1.1)";
+      });
+      frames.forEach(function (img) {
+        var wrap = img.closest(".media-frame");
+        if (!wrap) return;
+        var rect = wrap.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        var p = ((window.innerHeight - rect.top) / (window.innerHeight + rect.height) - 0.5) * 18;
+        img.style.transform = "scale(1.08) translate3d(0," + p.toFixed(1) + "px,0)";
+      });
+    }
+    window.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }, { passive: true });
+    update();
   }
 
 
@@ -137,6 +169,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initAos();
+    initParallax();
     bindForms();
   });
 })();

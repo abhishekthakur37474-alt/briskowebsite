@@ -1,7 +1,7 @@
 <?php
 $pageMeta = [
     'title' => 'Franchise | Brisko Pizza',
-    'description' => 'Own a Brisko Pizza franchise. Bring a trusted 100% vegetarian, no onion no garlic pizza brand to your city.',
+    'description' => 'Own a Brisko Pizza franchise. Bring a trusted 100% vegetarian pizza brand — with a no onion and no garlic category — to your city.',
 ];
 require __DIR__ . '/includes/header.php';
 $whatsappHref = whatsapp_url();
@@ -10,24 +10,24 @@ $whatsappHref = whatsapp_url();
 <section class="page-hero">
     <div class="page-hero-bg franchise" aria-hidden="true"></div>
     <div class="container">
-        <p class="eyebrow">Franchise</p>
-        <h1 class="display display-lg">Own a Brisko Pizza Franchise</h1>
-        <p class="lead">Bring a trusted vegetarian pizza experience to your city.</p>
+        <p class="eyebrow" data-aos="fade-up">Franchise</p>
+        <h1 class="display display-lg" data-aos="fade-up" data-aos-delay="80">Own a Brisko Pizza Franchise</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="140">Bring a trusted vegetarian pizza experience to your city.</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
         <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-right">
                 <div class="media-frame">
                     <img src="<?php echo e(asset_url('images/fresh-veg.webp')); ?>" alt="Fresh vegetarian pizza ingredients" width="1400" height="930" loading="lazy">
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-up">
+            <div class="col-lg-6" data-aos="fade-left">
                 <p class="eyebrow">The Opportunity</p>
                 <h2 class="display display-lg">A focused vegetarian pizza brand.</h2>
-                <p>Brisko Pizza is built around a clear idea: premium vegetarian pizza with no onion and no garlic, served in a family-friendly setting. For franchise partners, that clarity is the advantage — a distinctive concept, a trustworthy kitchen standard and a brand that feels at home with Indian families.</p>
+                <p>Brisko Pizza is built around a clear idea: premium vegetarian pizza in a family-friendly setting, including a no onion and no garlic category. For franchise partners, that clarity is the advantage — a distinctive concept, a trustworthy kitchen standard and a brand that feels at home with Indian families.</p>
                 <p>We look for partners who care about quality, hospitality and long-term brand building. Franchise investment and requirements are discussed during the enquiry process.</p>
                 <div class="hero-actions">
                     <a class="btn btn-primary btn-cta" href="<?php echo e(site_url('enquiry.php')); ?>">Start Franchise Enquiry <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
@@ -57,7 +57,7 @@ $whatsappHref = whatsapp_url();
                 <article class="value-card">
                     <div class="value-num">02</div>
                     <h3>Pure Vegetarian Concept</h3>
-                    <p>100% veg, no onion, no garlic — a culinary position that is easy to understand and hard to copy casually.</p>
+                    <p>100% veg, with a no onion and no garlic category — a culinary position that is easy to understand and hard to copy casually.</p>
                 </article>
             </div>
             <div class="col-md-6" data-aos="fade-up" data-aos-delay="160">
@@ -100,7 +100,7 @@ $whatsappHref = whatsapp_url();
 <section class="final-cta">
     <div class="final-cta-bg" aria-hidden="true"></div>
     <div class="container">
-        <div class="final-inner" data-aos="fade-up">
+        <div class="final-inner" data-aos="zoom-in">
             <h2 class="display display-lg">Ready to Bring Brisko Pizza to Your City?</h2>
             <p class="lead">Take the first step towards becoming a Brisko Pizza franchise partner.</p>
             <div class="hero-actions justify-content-center">

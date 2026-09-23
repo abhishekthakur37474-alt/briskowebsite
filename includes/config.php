@@ -4,21 +4,23 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 define('SITE_NAME', 'Brisko Pizza');
-define('SITE_TAGLINE', 'Pure vegetarian pizza with no onion and no garlic.');
+define('SITE_TAGLINE', 'Pure vegetarian pizza, including a no onion and no garlic category.');
 define('SITE_URL', '');
 
 define('ADMIN_EMAIL', 'franchise@example.com');
 define('FROM_EMAIL', 'noreply@example.com');
 define('FROM_NAME', 'Brisko Pizza Website');
 
-define('BUSINESS_PHONE', '9410000428');
-define('BUSINESS_PHONE_DISPLAY', '9410000428');
-define('WHATSAPP_NUMBER', '919410000428');
-define('WHATSAPP_DISPLAY', '9410000428');
+define('BUSINESS_PHONE', '9762418399');
+define('BUSINESS_PHONE_DISPLAY', '9762418399');
+define('WHATSAPP_NUMBER', '919762418399');
+define('WHATSAPP_DISPLAY', '9762418399');
 define('WHATSAPP_MESSAGE', 'Hello Brisko Pizza, I am interested in your franchise opportunity.');
 
 define('INSTAGRAM_URL', 'https://www.instagram.com/briskopizza?stkn=ZXZ6a2YxY2syYzlv');
 define('FACEBOOK_URL', 'https://www.facebook.com/share/1CCptywkKV/');
+define('APP_PLAY_STORE_URL', 'https://play.google.com/store/apps/details?id=com.briskopizza.app');
+define('APP_NAME', 'Brisko Pizza App');
 
 $businessAddress = 'Brisko Pizza, Delhi - Haridwar Rd, near RMP (PG) College, Roorkee, Gurukul Narsan, Uttarakhand 247670';
 define('MAPS_SHARE_URL', 'https://maps.app.goo.gl/S12ay4rZQwqjTr9W9?g_st=iw');
@@ -122,7 +124,7 @@ function page_meta($overrides = [])
 {
     $defaults = [
         'title' => 'Brisko Pizza | Pure Vegetarian Pizza & Franchise',
-        'description' => 'Brisko Pizza is a pure vegetarian pizza brand serving delicious food with no onion and no garlic. Explore Brisko Pizza and franchise opportunities.',
+        'description' => 'Brisko Pizza is a pure vegetarian pizza brand. Enjoy classic veg pizzas and a dedicated no onion, no garlic category. Explore Brisko Pizza and franchise opportunities.',
         'canonical' => '',
         'og_image' => asset_url('images/og-cover.jpg'),
         'page' => current_page(),
