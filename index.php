@@ -8,16 +8,44 @@ $whatsappHref = whatsapp_url();
 ?>
 
 <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="container">
-        <div class="hero-content">
-            <p class="eyebrow reveal-hero" style="--d: 0ms">100% Pure Vegetarian</p>
-            <h1 class="display display-xl reveal-hero" style="--d: 90ms">Pure Veg.<br>Pure Taste.<br>Pure Brisko.</h1>
-            <p class="lead reveal-hero" style="--d: 180ms">Experience a pizza brand crafted for families who believe great taste can be completely vegetarian.</p>
+    <div class="hero-stage" aria-hidden="true">
+        <div class="hero-glow hero-glow-left"></div>
+        <div class="hero-glow hero-glow-right"></div>
+        <div class="hero-grain"></div>
+    </div>
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow reveal-hero" style="--d: 0ms">100% PURE VEGETARIAN</p>
+            <h1 class="display display-xl reveal-hero" style="--d: 90ms">Bite into<br>Happiness</h1>
+            <p class="lead reveal-hero" style="--d: 180ms">Freshly crafted vegetarian pizzas made with quality ingredients, bold flavours and a whole lot of happiness.</p>
             <div class="hero-actions reveal-hero" style="--d: 280ms">
-                <a class="btn btn-primary btn-cta" href="<?php echo e(site_url('order.php')); ?>">Order on App <i class="bi bi-phone" aria-hidden="true"></i></a>
-                <a class="btn btn-outline-light btn-cta" href="<?php echo e(site_url('franchise.php')); ?>">Get Franchise <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-                <a class="btn btn-ghost" href="<?php echo e($whatsappHref); ?>" target="_blank" rel="noopener noreferrer">Enquire on WhatsApp <i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                <a class="btn btn-primary btn-cta" href="<?php echo e(site_url('order.php')); ?>">ORDER NOW</a>
+                <a class="btn btn-outline-light btn-cta" href="<?php echo e(site_url('franchise.php')); ?>">GET FRANCHISE</a>
+            </div>
+        </div>
+        <div class="hero-showcase" data-hero-showcase>
+            <div class="hero-orbit" aria-hidden="true">
+                <span class="hero-speck" data-parallax="0.12"></span>
+                <span class="hero-speck hero-speck-2" data-parallax="-0.08"></span>
+                <span class="hero-speck hero-speck-3" data-parallax="0.18"></span>
+            </div>
+            <div class="hero-pizzas" data-hero-pizzas>
+                <figure class="hero-pizza is-active" data-pizza data-name="Farmhouse Pizza" data-index="01">
+                    <img src="<?php echo e(asset_url('images/pizza/farmhouse.webp')); ?>?v=2" alt="Farmhouse Pizza" width="900" height="900" fetchpriority="high">
+                </figure>
+                <figure class="hero-pizza" data-pizza data-name="Cheese Pizza" data-index="02">
+                    <img src="<?php echo e(asset_url('images/pizza/cheese.webp')); ?>?v=3" alt="Cheese Pizza" width="900" height="900">
+                </figure>
+                <figure class="hero-pizza" data-pizza data-name="Corn Pizza" data-index="03">
+                    <img src="<?php echo e(asset_url('images/pizza/corn.webp')); ?>?v=3" alt="Corn Pizza" width="900" height="900">
+                </figure>
+                <figure class="hero-pizza" data-pizza data-name="Paneer Pizza" data-index="04">
+                    <img src="<?php echo e(asset_url('images/pizza/paneer.webp')); ?>?v=3" alt="Paneer Pizza" width="900" height="900">
+                </figure>
+            </div>
+            <div class="hero-product" aria-live="polite">
+                <span class="hero-product-index" data-hero-index>01 / 04</span>
+                <span class="hero-product-name" data-hero-name>Farmhouse Pizza</span>
             </div>
         </div>
     </div>
@@ -111,8 +139,8 @@ $whatsappHref = whatsapp_url();
                         <span>Veg</span>
                     </div>
                     <div class="stat" data-aos="fade-up" data-aos-delay="160">
-                        <b>Jain</b>
-                        <span>Friendly Options</span>
+                        <b>No Onion</b>
+                        <span>&amp; No Garlic Options</span>
                     </div>
                     <div class="stat" data-aos="fade-up" data-aos-delay="240">
                         <b>100%</b>

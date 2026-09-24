@@ -40,7 +40,10 @@ $whatsappHref = whatsapp_url();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo e(asset_url('css/style.css')); ?>?v=9">
+    <link rel="stylesheet" href="<?php echo e(asset_url('css/style.css')); ?>?v=14">
+    <?php if ($isHome): ?>
+    <link rel="preload" as="image" href="<?php echo e(asset_url('images/pizza/farmhouse.webp')); ?>?v=2">
+    <?php endif; ?>
     <script type="application/ld+json">
     <?php
     $schema = [

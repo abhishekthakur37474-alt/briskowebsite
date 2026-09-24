@@ -1,7 +1,7 @@
 <?php
 $pageMeta = [
     'title' => 'Contact | Brisko Pizza',
-    'description' => 'Contact Brisko Pizza by phone or WhatsApp. Follow the brand on Instagram and Facebook.',
+    'description' => 'Contact Brisko Pizza by outlet number or WhatsApp. Follow the brand on Instagram and Facebook.',
 ];
 require __DIR__ . '/includes/header.php';
 $whatsappHref = whatsapp_url();

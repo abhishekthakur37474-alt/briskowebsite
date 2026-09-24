@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 define('SITE_NAME', 'Brisko Pizza');
-define('SITE_TAGLINE', 'Pure vegetarian pizza, including a no onion and no garlic category.');
+define('SITE_TAGLINE', 'Bite into Happiness');
 define('SITE_URL', '');
 
 define('ADMIN_EMAIL', 'franchise@example.com');
@@ -13,8 +13,8 @@ define('FROM_NAME', 'Brisko Pizza Website');
 
 define('BUSINESS_PHONE', '9762418399');
 define('BUSINESS_PHONE_DISPLAY', '9762418399');
-define('WHATSAPP_NUMBER', '919762418399');
-define('WHATSAPP_DISPLAY', '9762418399');
+define('WHATSAPP_NUMBER', '919410000428');
+define('WHATSAPP_DISPLAY', '9410000428');
 define('WHATSAPP_MESSAGE', 'Hello Brisko Pizza, I am interested in your franchise opportunity.');
 
 define('INSTAGRAM_URL', 'https://www.instagram.com/briskopizza?stkn=ZXZ6a2YxY2syYzlv');
@@ -24,7 +24,7 @@ define('APP_NAME', 'Brisko Pizza App');
 
 $businessAddress = 'Brisko Pizza, Delhi - Haridwar Rd, near RMP (PG) College, Roorkee, Gurukul Narsan, Uttarakhand 247670';
 define('MAPS_SHARE_URL', 'https://maps.app.goo.gl/S12ay4rZQwqjTr9W9?g_st=iw');
-define('MAPS_EMBED_QUERY', 'Brisko pizza, Delhi - Haridwar Rd, near RMP (PG) Collage, Roorkee, Gurukul Narsan, Uttarakhand 247670');
+define('MAPS_EMBED_QUERY', 'Brisko Pizza, Delhi - Haridwar Rd, near RMP (PG) College, Roorkee, Gurukul Narsan, Uttarakhand 247670');
 
 define('INDIAN_STATES', json_encode([
     'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
@@ -83,7 +83,7 @@ function maps_query_url()
 
 function maps_embed_url()
 {
-    return 'https://maps.google.com/maps?q=' . rawurlencode(MAPS_EMBED_QUERY) . '&output=embed';
+    return 'https://www.google.com/maps?q=' . rawurlencode(MAPS_EMBED_QUERY) . '&hl=en&z=16&output=embed';
 }
 
 function has_real_address()

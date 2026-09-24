@@ -10,7 +10,7 @@
                             <span class="brand-sub">PIZZA</span>
                         </span>
                     </a>
-                    <p class="footer-tagline">Pure vegetarian pizza, with a no onion and no garlic category.</p>
+                    <p class="footer-tagline">Bite into Happiness</p>
                     <p class="footer-copy-short">A clean, family-friendly pizza brand built on taste, hygiene and values that Indian families trust.</p>
                 </div>
                 <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="80">
@@ -41,7 +41,7 @@
                     <h2 class="footer-heading">Contact</h2>
                     <ul class="footer-links">
                         <li><?php echo e($businessAddress); ?></li>
-                        <li><a href="<?php echo e(phone_tel()); ?>"><?php echo e(BUSINESS_PHONE_DISPLAY); ?></a></li>
+                        <li>Outlet number <a href="<?php echo e(phone_tel()); ?>"><?php echo e(BUSINESS_PHONE_DISPLAY); ?></a></li>
                         <li><a href="<?php echo e($whatsappHref); ?>" target="_blank" rel="noopener noreferrer">WhatsApp <?php echo e(WHATSAPP_DISPLAY); ?></a></li>
                     </ul>
                     <a class="btn btn-primary btn-cta mt-3" href="<?php echo e(site_url('enquiry.php')); ?>">Get Franchise <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
@@ -64,6 +64,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-    <script src="<?php echo e(asset_url('js/script.js')); ?>?v=5" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="<?php echo e(asset_url('js/hero.js')); ?>?v=5" defer></script>
+    <script src="<?php echo e(asset_url('js/script.js')); ?>?v=6" defer></script>
 </body>
 </html>

@@ -59,7 +59,7 @@
 
   function initParallax() {
     if (reduceMotion) return;
-    var layers = document.querySelectorAll(".hero-bg, .final-cta-bg, .page-hero-bg");
+    var layers = document.querySelectorAll(".final-cta-bg, .page-hero-bg");
     var frames = document.querySelectorAll(".media-frame img");
     if (!layers.length && !frames.length) return;
     var ticking = false;
