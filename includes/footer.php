@@ -65,7 +65,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="<?php echo e(asset_url('js/hero.js')); ?>?v=5" defer></script>
+    <script src="<?php echo e(asset_url('js/hero.js')); ?>?v=7" defer></script>
     <script src="<?php echo e(asset_url('js/script.js')); ?>?v=6" defer></script>
 </body>
 </html>

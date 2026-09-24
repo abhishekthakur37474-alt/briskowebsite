@@ -25,9 +25,9 @@ $whatsappHref = whatsapp_url();
         </div>
         <div class="hero-showcase" data-hero-showcase>
             <div class="hero-orbit" aria-hidden="true">
-                <span class="hero-speck" data-parallax="0.12"></span>
-                <span class="hero-speck hero-speck-2" data-parallax="-0.08"></span>
-                <span class="hero-speck hero-speck-3" data-parallax="0.18"></span>
+                <span class="hero-speck"></span>
+                <span class="hero-speck hero-speck-2"></span>
+                <span class="hero-speck hero-speck-3"></span>
             </div>
             <div class="hero-pizzas" data-hero-pizzas>
                 <figure class="hero-pizza is-active" data-pizza data-name="Farmhouse Pizza" data-index="01">
@@ -44,8 +44,10 @@ $whatsappHref = whatsapp_url();
                 </figure>
             </div>
             <div class="hero-product" aria-live="polite">
-                <span class="hero-product-index" data-hero-index>01 / 04</span>
-                <span class="hero-product-name" data-hero-name>Farmhouse Pizza</span>
+                <div class="hero-product-inner">
+                    <span class="hero-product-index" data-hero-index>01 / 04</span>
+                    <span class="hero-product-name" data-hero-name>Farmhouse Pizza</span>
+                </div>
             </div>
         </div>
     </div>

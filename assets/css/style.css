@@ -519,6 +519,7 @@ body.nav-open .nav-toggle-bar {
   top: 18%;
   left: 8%;
   box-shadow: 0 0 18px rgba(196, 30, 58, 0.35);
+  animation: speckDrift 8s ease-in-out infinite;
 }
 
 .hero-speck-2 {
@@ -527,6 +528,8 @@ body.nav-open .nav-toggle-bar {
   top: 72%;
   left: 78%;
   background: rgba(255, 255, 255, 0.22);
+  animation-duration: 10s;
+  animation-delay: -2.5s;
 }
 
 .hero-speck-3 {
@@ -536,20 +539,25 @@ body.nav-open .nav-toggle-bar {
   right: 12%;
   left: auto;
   background: rgba(196, 30, 58, 0.28);
+  animation-duration: 9s;
+  animation-delay: -1.2s;
+}
+
+@keyframes speckDrift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -16px, 0); }
 }
 
 .hero-pizzas {
   position: relative;
-  width: min(100%, 620px);
+  width: min(100%, 640px);
   aspect-ratio: 1;
-  transform-style: preserve-3d;
   perspective: 1600px;
   perspective-origin: 50% 42%;
   overflow: hidden;
-  clip-path: circle(46% at 50% 50%);
-  -webkit-clip-path: circle(46% at 50% 50%);
 }
 
+/* No-JS fallback: first pizza rests centered, the others wait off to the right. */
 .hero-pizza {
   position: absolute;
   inset: 0;
@@ -557,43 +565,58 @@ body.nav-open .nav-toggle-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transform: translate3d(0, 0, 0) rotateX(0) rotateY(0) rotateZ(0) scale(1);
-  will-change: transform;
+  transform: translate3d(118%, 0, -520px) scale(0.72) rotateY(-30deg) rotateZ(6deg);
+  transform-origin: 50% 50%;
   backface-visibility: hidden;
+  will-change: transform;
 }
 
 .hero-pizza.is-active {
-  pointer-events: auto;
+  opacity: 1;
   visibility: visible;
-  transform: translate3d(0, 0, 0) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale(1) rotateY(0deg) rotateZ(0deg);
 }
 
 .hero-pizza img {
-  width: 88%;
-  height: 88%;
+  width: 100%;
+  height: 100%;
   max-width: none;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
-  border-radius: 50%;
   display: block;
-  aspect-ratio: 1;
-  -webkit-mask-image: radial-gradient(circle at center, #000 64%, transparent 78%);
-  mask-image: radial-gradient(circle at center, #000 64%, transparent 78%);
-  filter: drop-shadow(0 32px 42px rgba(0, 0, 0, 0.58));
+  filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.5));
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/*
+ * JS mode: GSAP owns every transform. All pizzas stay painted; the waiting /
+ * exiting ones are hidden purely by the .hero-pizzas clip box, never by opacity.
+ */
+.js .hero-pizza,
+.js .hero-pizza.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(118%, 0, -520px) scale(0.72) rotateY(-30deg) rotateZ(6deg);
 }
 
 .hero-product {
   position: absolute;
   right: 4%;
   bottom: 8%;
+  overflow: hidden;
+  text-align: right;
+  z-index: 3;
+}
+
+.hero-product-inner {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  text-align: right;
-  z-index: 3;
 }
 
 .hero-product-index {
@@ -1567,7 +1590,6 @@ body.nav-open .nav-toggle-bar {
     animation: none !important;
     transition: none !important;
   }
-  .hero-bg,
   .final-cta-bg,
   .page-hero-bg,
   .media-frame img,

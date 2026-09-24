@@ -12,6 +12,7 @@ $whatsappHref = whatsapp_url();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.documentElement.classList.add("js");</script>
     <title><?php echo e($meta['title']); ?></title>
     <meta name="description" content="<?php echo e($meta['description']); ?>">
     <meta name="theme-color" content="#111111">
@@ -40,7 +41,7 @@ $whatsappHref = whatsapp_url();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo e(asset_url('css/style.css')); ?>?v=14">
+    <link rel="stylesheet" href="<?php echo e(asset_url('css/style.css')); ?>?v=16">
     <?php if ($isHome): ?>
     <link rel="preload" as="image" href="<?php echo e(asset_url('images/pizza/farmhouse.webp')); ?>?v=2">
     <?php endif; ?>
